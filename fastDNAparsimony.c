@@ -1589,7 +1589,7 @@ void makeParsimonyTreeFastDNA(tree *tr, analdef *adef)
 	
 	fclose(f);
 	
-	printBothOpen("Parsimony tree [%d] computed in %f seconds written to file: %s\n", treeCounter, (gettime() - t), fileName);
+	printBothOpen("Parsimony tree [%d] with length %u computed in %f seconds written to file: %s\n", treeCounter, tr->bestParsimony, (gettime() - t), fileName);
       }
 
       treeCounter++;

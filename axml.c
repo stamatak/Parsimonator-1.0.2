@@ -920,7 +920,7 @@ static boolean getdata(rawdata *rdta, tree *tr)
 		  my_i++;
 		  if(my_i >= nmlngth)
 		    {		     
-		      printf("Taxon Name to long at taxon %d, adapt constant nmlngth in\n", i);
+		      printf("Taxon Name to long at taxon %zd, adapt constant nmlngth in\n", i);
 		      printf("axml.h, current setting %d\n", nmlngth);
 		      exit(0);
 		    }
@@ -955,7 +955,7 @@ static boolean getdata(rawdata *rdta, tree *tr)
 		{
 		  if(!whitechar(ch))
 		    {
-		      printf("ERROR: Bad base (%c) at site %d of sequence %d\n",
+		      printf("ERROR: Bad base (%c) at site %zd of sequence %zd\n",
 			     ch, j + 1, i);
 		      return FALSE;
 		    }
@@ -964,7 +964,7 @@ static boolean getdata(rawdata *rdta, tree *tr)
 
 	  if (ch == EOF)
 	    {
-	      printf("ERROR: End-of-file at site %d of sequence %d\n", j + 1, i);
+	      printf("ERROR: End-of-file at site %zd of sequence %zd\n", j + 1, i);
 	      return  FALSE;
 	    }
 
@@ -978,7 +978,7 @@ static boolean getdata(rawdata *rdta, tree *tr)
 		if (j != basesnew)
 		  {
 		    printf("ERROR: Sequences out of alignment\n");
-		    printf("%d (instead of %d) residues read in sequence %d %s\n",
+		    printf("%zd (instead of %zd) residues read in sequence %zd %s\n",
 			   j - basesread, basesnew - basesread, i, tr->nameList[i]);
 		    return  FALSE;
 		  }
