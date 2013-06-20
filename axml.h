@@ -48,8 +48,8 @@
 #define MIN(x,y)  (((x)<(y)) ?    (x)  : (y))
 
 #define programName        "Parsimonator"
-#define programVersion     "1.0.2"
-#define programDate        "June 2011"
+#define programVersion     "1.0.3"
+#define programDate        "June 2013"
 
 
 
