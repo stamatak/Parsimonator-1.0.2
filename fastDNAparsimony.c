@@ -1482,6 +1482,7 @@ void makeParsimonyTreeFastDNA(tree *tr, analdef *adef)
       treeCounter++;
     }
 
+  free(perm);
   free(parsimonySpace);
 } 
 
